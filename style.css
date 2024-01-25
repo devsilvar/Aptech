@@ -1,0 +1,45 @@
+h1,
+p {
+  text-align: center;
+}
+
+section {
+  width: 50%;
+  margin: auto;
+  background-color: darkred;
+}
+
+label {
+  display: block;
+}
+
+div {
+  width: 85%;
+  margin: auto;
+  padding: 20px 0px;
+
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.push-up {
+  margin-top: 15px;
+  display: block;
+}
+
+.push-down {
+  margin-bottom: 5px;
+}

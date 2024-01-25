@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aptech Practice 1</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #333333;
+        font-family: sans-serif;
+        margin: 0;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 36px;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      h3 {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      b,
+      strong {
+        font-weight: bold;
+      }
+
+      i,
+      em {
+        font-style: italic;
+      }
+
+      u,
+      ins {
+        text-decoration: underline;
+      }
+
+      small {
+        font-size: 12px;
+      }
+
+      blockquote {
+        margin-left: 25px;
+        font-size: 18px;
+      }
+
+      ol {
+        list-style-type: decimal;
+        margin-left: 25px;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 25px;
+      }
+
+      pre {
+        font-family: monospace;
+        background-color: #dddddd;
+        padding: 10px;
+      }
+
+      body > header {
+        background-color: #333333;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      body > nav {
+        background-color: #999999;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      body > article {
+        background-color: #eeeeee;
+        min-height: 300px;
+        margin: 10px;
+        padding: 20px;
+      }
+
+      body > aside {
+        background-color: #aaaaaa;
+        min-height: 300px;
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      body > footer {
+        background-color: #333333;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Modernistic Website</h1>
+    </header>
+    <nav>
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Products</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h3>Heading 1</h3>
+      <p>
+        Paragraph text describing heading 1 with <b>bold</b>, <i>italic</i>, and
+        <u>underlined</u> words. <small>Small Text</small>
+      </p>
+
+      <h4>Heading 2</h4>
+      <p>
+        Paragraph text describing heading 2 with <strong>strong</strong> words
+        and <sub>subscript</sub> text.
+      </p>
+
+      <h5>Heading 3</h5>
+      <p>
+        Paragraph text describing heading 3 with <ins>inserted</ins> and
+        <del>deleted</del> text.
+      </p>
+
+      <h6>Heading 4</h6>
+      <blockquote>
+        "When one door closes, another opens; Even though the door may not look
+        like the one you were expecting, it could be exactly what you need."
+      </blockquote>
+
+      <h2>Heading 5</h2>
+      <ol>
+        <li>Ordered List Item 1</li>
+        <li>Ordered List Item 2</li>
+        <li>
+          Ordered List Item 3
+          <ul>
+            <li>Unordered List Item 1</li>
+            <li>Unordered List Item 2</li>
+            <li>Unordered List Item 3</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Heading 6</h3>
+      <pre>
+function factorial(n) {
+  if (n == 1) {
+    return 1;
+  } else {
+    return n * factorial(n-1);
+  }
+}
+
+factorial(5); // returns 120 (1*2*3*4*5)
+		</pre
+      >
+    </article>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>Text and links for the sidebar could go here.</p>
+    </aside>
+
+    <footer>
+      <p>&copy; 2020 Modernistic Website</p>
+    </footer>
+
+    <script>
+      document.addEventListener(
+        "contextmenu",
+
+        (event) => event.preventDefault()
+      );
+      document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey) {
+          event.preventDefault();
+        }
+
+        if (event.keyCode == 123) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>
