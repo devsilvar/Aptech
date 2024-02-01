@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-transform: capitalize;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        text-align: center;
+        font-size: 5rem;
+      }
+      main section {
+        margin-bottom: 90px;
+        display: flex;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        gap: 20px;
+        align-items: center;
+        font-size: 20px;
+      }
+      main section:first-child {
+        flex-flow: row-reverse;
+      }
+      main section:nth-child(2) {
+        background-color: darkgray;
+      }
+      main section:nth-child(3) {
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        flex-flow: column-reverse;
+      }
+      main section div {
+        padding: 40px;
+      }
+      main section img {
+        width: 100%;
+      }
+
+      #end {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        padding: 70px 0px;
+        justify-content: center;
+        background-color: lightgray;
+        text-transform: capitalize;
+      }
+
+      #end div {
+        width: 25%;
+        background-color: white;
+        padding: 30px;
+        border-radius: 6px;
+        line-height: 1.5;
+      }
+
+      section#imgs {
+        display: flex;
+        width: 100%;
+        margin: 50px auto;
+        position: relative;
+      }
+
+      #imgs div {
+        width: 40%;
+      }
+
+      #imgs img {
+        width: 100%;
+      }
+
+      #imgs button {
+        position: absolute;
+        top: 50%;
+        background-color: lightgray;
+        padding: 10px 20px;
+        border: 1px solid lightgray;
+        border-radius: 11px;
+        outline: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1rem;
+      }
+
+      #imgs div:nth-child(1) button {
+        left: 15%;
+      }
+
+      #imgs div:nth-child(2) button {
+        left: 50%;
+      }
+      #imgs div:nth-child(3) button {
+        right: 15%;
+      }
+      /* .btn1 {
+        display: none;
+      }
+
+      .div1:hover + .btn1,
+      .btn1:hover {
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Starting a Web Design Project</h1>
+    <main>
+      <section>
+        <img src="./wireframe.png" alt="" />
+        <div>
+          <h3>Wireframing</h3>
+          <p>
+            When it comes to wirefraaming, YOu start out the process with a
+            pencil and a piece of paper, Wireframing is a low fidelity style of
+            designing a webpage . It is more like th estructure of the webpage
+          </p>
+        </div>
+      </section>
+      <section>
+        <img src="./mockup.png" alt="" />
+        <div>
+          <h3>Mockups</h3>
+          <p>
+            A mockup is usually closer to the feel and look of the website. In
+            most cases you can design the color, the images and the icons you
+            would like to use, It is a more rela representation of a website
+          </p>
+        </div>
+      </section>
+      <section>
+        <img src="./prototype.png" alt="" />
+        <div>
+          <h3>ProtoType</h3>
+          <p>
+            While a prootype, susually comes with the full package whereby you
+            have the design feel, the look and the animation being represented
+            on the prototyping tool.a good exmaple of such tool if figma
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <section id="end">
+      <div>
+        <h2>How you should start when building a client website</h2>
+        <p>
+          A more classic workFLow when you wnat to build a website is to start
+          off by looking at other popeles website. You might come across deisgns
+          that are complicated or the ones that are more esay , depending on
+          whichever one you come acorss, They are basicallly to give you insigts
+          on how you can design yours, you might not necessarily copy it to th
+          etee, You are just there to gain insight from it
+        </p>
+      </div>
+      <div>
+        <h2>Sample Website to get Ideas Insipration</h2>
+        <p>
+          A good exmaple of website you can check out is awwards Another example
+          is ui-patterns.com (it gives you insighst on what design you should
+          used based on the problem you are trying to solve for your users
+          experince)
+        </p>
+      </div>
+    </section>
+
+    <section id="imgs">
+      <div>
+        <img src="uvpin.png" alt="" />
+        <a href="https://www.uxpin.com/">
+          <button class="btn1">Visit</button>
+        </a>
+      </div>
+
+      <div>
+        <img src="blasmiq.png" alt="" />
+        <a href="https://balsamiq.com/">
+          <button class="btn2">Visit</button>
+        </a>
+      </div>
+
+      <div>
+        <img src="justinmind.png" alt="" />
+        <a href="https://www.justinmind.com/">
+          <button class="btn3">Visit</button>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
