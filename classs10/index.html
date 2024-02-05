@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* img {
+          background-color: transparent;
+          background: transparent;
+        } */
+      /* p{
+          display: inline;
+        } */
+
+      /* div {
+          background-color: red;
+          padding: 20px;
+          width: 20%;
+           float: right;
+        }
+
+
+
+        form {
+          width: 300px;
+          height: 300px;
+          margin: auto;
+          padding: 30px;
+          border: 1px solid red;
+          background: transparent;
+          box-shadow: 2px 7px 15px 1px rgb(0 0 0 / 20%);
+        } */
+      .sp {
+        background-color: green;
+        width: 20%;
+        display: inline;
+      }
+      .sp1 {
+        width: 20%;
+        display: inline;
+        background-color: blue;
+      }
+
+      .sm-box {
+        background-color: aqua;
+        padding: 50px;
+        max-width: 80%;
+        width: 1404px;
+        margin: auto;
+      }
+
+      .block {
+        border: 2px solid grey;
+        display: flex;
+      }
+
+      .block div:first-child {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @keyframes upDown {
+        0% {
+          background-color: green;
+          position: absolute;
+          right: 0%;
+        }
+        25% {
+          background-color: red;
+          position: absolute;
+          right: 25%;
+        }
+        50% {
+          background-color: red;
+          position: absolute;
+
+          right: 50%;
+        }
+        75% {
+          background-color: red;
+          position: absolute;
+          right: 75%;
+        }
+
+        100% {
+          background-color: red;
+          position: absolute;
+          right: 100%;
+        }
+      }
+      .animate {
+        background-color: teal;
+        width: 30%;
+        height: 200px;
+        padding: 30px;
+        animation-name: upDown;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+      }
+
+      .trans:hover {
+        transition: transform 4s;
+
+        transform: scale(3);
+      }
+
+      .trans {
+        background-color: aqua;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        transform: scale(1);
+      }
+
+      .inside,
+      .inside1,
+      .inside2 {
+        padding: 30px;
+
+        position: absolute;
+      }
+      .inside {
+        width: 20%;
+        background-color: red;
+        z-index: 4;
+        height: 500px;
+      }
+      .inside1 {
+        width: 40%;
+        background-color: aqua;
+        z-index: 2;
+      }
+
+      .inside2 {
+        width: 70%;
+        background-color: blue;
+        z-index: -10;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="red">
+      <form action="">
+        <input type="text" />
+        <button></button>
+      </form>
+    </div> -->
+    <section>
+      <!-- <span class="sp">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+    </span>
+    <span class="sp1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolore nisi porro sapiente dolorum 
+    </span>
+    
+    <figure>
+        <img src="../class7Note/car.jpeg" alt="">
+        <figcaption>A simple Car</figcaption>
+    </figure> -->
+
+      <!-- <div class="sm-box">
+red
+</div>
+
+
+    <div>red</div>
+
+
+    <div class="block">
+     <div>
+<img src="../class7Note/car.jpeg" alt="">
+<img src="../class7Note/img.jpg" alt="">
+
+ </div>
+<div>
+    <img src="../class7Note/car.jpeg" alt="" height="300px">
+
+</div>
+
+    </div> -->
+
+      <!-- <div class="animate"></div> -->
+
+      <div class="trans"></div>
+
+      <div class="inside">
+        <div class="inside1">
+          <div class="inside2"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
