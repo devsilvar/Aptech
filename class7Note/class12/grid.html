@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        background-color: red;
+        padding: 30px;
+      }
+
+      .basic-grid {
+        display: grid;
+        grid-template-columns: 5% 15% 20% 25% repeat(6, 1fr);
+        column-gap: 10px;
+        grid-template-rows: repeat(10, 1fr);
+        row-gap: 20px;
+      }
+      .temp-area {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+
+        /* grid-template-areas:
+          "A A A"
+          "B B C"
+          "D D C"; */
+      }
+
+      .temp-area div:nth-child(1) {
+        grid-column-start: span 4;
+      }
+      .temp-area div:nth-child(2) {
+        grid-column-start: span 3;
+      }
+      .temp-area div:nth-child(4) {
+        grid-column-start: span 3;
+      }
+      .temp-area div:nth-child(3) {
+        grid-row-start: span 2;
+      }
+      /* .temp-area div:nth-child(1) {
+        grid-area: A;
+      }
+      .temp-area div:nth-child(2) {
+        grid-area: B;
+      }
+      .temp-area div:nth-child(3) {
+        grid-area: C;
+      }
+      .temp-area div:nth-child(4) {
+        grid-area: D;
+      } */
+
+      .resp-grid {
+        background-color: green;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+      }
+
+      .resp-grid div:nth-child(5) {
+        grid-row-start: span 3;
+      }
+
+      .resp-grid div:nth-child(6) {
+        grid-row-start: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <section class="basic-grid">
+      <div class="box-1">A</div>
+      <div class="box-2">B</div>
+      <div class="box-3">C</div>
+      <div class="box-4">D</div>
+      <div class="box-5">E</div>
+      <div class="box-2">F</div>
+      <div class="box-3">G</div>
+      <div class="box-4">H</div>
+      <div class="box-5">I</div>
+      <div class="box-5">J</div>
+    </section> -->
+
+    <!-- <section class="temp-area">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+    </section> -->
+
+    <section class="resp-grid">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+      <div>J</div>
+      <div>K</div>
+      <div>L</div>
+      <div>M</div>
+    </section>
+
+    <input type="text" name="" id="" required />
+    <input type="number" name="" id="" autofocus />
+    <input type="text" value="15631256" name="" id="" style="display: none" />
+
+    <p type="hidden">Hello</p>
+    <time> </time>
+    <!-- <section class="auto-grid">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+      </section> -->
+  </body>
+</html>
