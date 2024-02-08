@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      div {
+        background-color: brown;
+        color: white;
+        padding: 30px;
+      }
+
+      section {
+        display: grid;
+        gap: 10px;
+        /* grid-template-columns: 2fr 1fr 1fr 1fr; */
+        grid-template-areas:
+          "W X Y"
+          "W C B"
+          "W N M";
+      }
+      section div:nth-child(1) {
+        grid-area: W;
+      }
+      section div:nth-child(2) {
+        grid-area: X;
+      }
+
+      section div:nth-child(3) {
+        grid-area: Y;
+      }
+      section div:nth-child(4) {
+        grid-area: W;
+      }
+      section div:nth-child(5) {
+        grid-area: C;
+      }
+
+      section div:nth-child(6) {
+        grid-area: B;
+      }
+
+      section div:nth-child(7) {
+        grid-area: W;
+      }
+
+      section div:nth-child(8) {
+        grid-area: N;
+      }
+
+      section div:nth-child(9) {
+        grid-area: M;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+    </section>
+  </body>
+</html>
