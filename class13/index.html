@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: flex;
+        gap: 10px;
+      }
+
+      div {
+        min-width: 300px;
+        width: 90%;
+        background-color: red;
+        padding: 20px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 425px) {
+        section {
+          min-width: 30px;
+          width: 80%;
+          flex-direction: column;
+        }
+        div {
+          background-color: blue;
+        }
+
+        .img-box img {
+          width: 300px;
+          height: auto;
+        }
+      }
+
+      @media screen and (min-width: 600px) and (max-width: 768px) {
+        section {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        div {
+          min-width: 100px;
+          width: 90%;
+          padding: 20px;
+          background-color: aqua;
+        }
+      }
+
+      /* 
+      @media screen and (width >= 323px) and (width <= 325px) {
+        div {
+          background-color: purple;
+        }
+      } */
+      /* 
+      @media screen and (orientation: landscape) {
+        div {
+          background-color: green;
+        }
+      } */
+
+      /*
+      @media screen and (min-width: 768px) {
+        .img-box img {
+          width: 600px;
+          height: auto;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .img-box img {
+          width: 1000px;
+          height: auto;
+        }
+      } */
+
+      /* Andriod - Phones 320px - 425px
+        Tablet 600px-768px
+        Laptop-desktop screen - 1024px - 1440px
+        large Screen monitor - 2560px and larger */
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+    </section>
+
+    <section class="img-box">
+      <img src="./imm.gif" alt="" />
+    </section>
+  </body>
+</html>
