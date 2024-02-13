@@ -11,15 +11,15 @@
       }
 
       div {
-        min-width: 300px;
+        min-width: 200px;
         width: 90%;
         background-color: red;
         padding: 20px;
       }
 
-      @media screen and (min-width: 320px) and (max-width: 425px) {
+      /* @media screen and (min-width: 320px) and (max-width: 425px) {
         section {
-          min-width: 30px;
+          min-width: 300px;
           width: 80%;
           flex-direction: column;
         }
@@ -45,8 +45,29 @@
           padding: 20px;
           background-color: aqua;
         }
+      } */
+
+      @media screen and (min-width: 320px) {
+        section {
+          width: 200px;
+          flex-wrap: wrap;
+        }
+
+        div {
+          background-color: yellow;
+        }
       }
 
+      @media screen and (min-width: 600px) {
+        section {
+          width: 400px;
+          flex-wrap: wrap;
+        }
+
+        div {
+          background-color: green;
+        }
+      }
       /* 
       @media screen and (width >= 323px) and (width <= 325px) {
         div {
@@ -83,15 +104,39 @@
   </head>
   <body>
     <section>
-      <div>A</div>
-      <div>B</div>
-      <div>C</div>
-      <div>D</div>
-      <div>E</div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
+        sit neque sint quibusdam velit incidunt, possimus error. Reprehenderit,
+        saepe consequatur suscipit non atque tempore! Modi eos natus quaerat
+        corporis earum.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore minus
+        beatae mollitia obcaecati nemo ad at perspiciatis amet soluta assumenda?
+        Nemo sunt nesciunt impedit modi placeat ipsum id esse quisquam.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo distinctio
+        cupiditate quod, vitae est explicabo temporibus ut suscipit dolore
+        doloremque harum nihil beatae consequuntur ipsa laudantium voluptate
+        praesentium doloribus magni.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+        eveniet ad sit repudiandae, reiciendis fugiat enim dicta illum
+        laboriosam explicabo tempora delectus porro, blanditiis molestias in
+        voluptatem illo eos est!
+      </div>
+      <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+        beatae dignissimos ex non et voluptates, est, praesentium necessitatibus
+        recusandae, aperiam quidem repellendus? Rerum enim beatae, facere iusto
+        doloribus dolores illum.
+      </div>
     </section>
-
+    <!-- 
     <section class="img-box">
       <img src="./imm.gif" alt="" />
-    </section>
+    </section> -->
   </body>
 </html>

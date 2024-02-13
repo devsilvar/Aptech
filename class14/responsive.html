@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .boxes {
+        min-width: 160px;
+        height: 200px;
+        background-color: teal;
+      }
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        .section {
+          background: red;
+        }
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        .section {
+          background: green;
+        }
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        .section {
+          background: blue;
+        }
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        .section {
+          background: orange;
+        }
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        .section {
+          background: pink;
+        }
+      }
+
+
+      
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+      <div class="boxes"></div>
+    </section>
+  </body>
+</html>
