@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 90%;
+          grid-column: 1;
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 768px) {
+        section {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column: 1;
+          gap: 10px;
+        }
+        .container {
+          width: 100%;
+          margin: auto;
+        }
+      }
+
+      div {
+        background-color: red;
+        padding: 10px;
+      }
+      section div:nth-child(1) {
+        /* display: flex;
+        flex-wrap: wrap; */
+        grid-column: 1 / span 2;
+        height: max-content;
+      }
+      section div:nth-child(1),
+      section div:last-child {
+        display: flex;
+        gap: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        section div:nth-child(1),
+        section div:last-child {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+      .inner,
+      .inner-text {
+        width: 50%;
+      }
+      @media screen and (min-width: 601px) and (max-width: 768px) {
+        section div:last-child {
+          flex-direction: column;
+        }
+        section div:last-child .inner,
+        section div:last-child .inner-text {
+          width: auto;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        section div .inner,
+        section div .inner-text {
+          width: auto;
+        }
+      }
+
+      .inner-text {
+        padding: 10px;
+      }
+      section div:nth-child(3) {
+        height: max-content;
+      }
+
+      section div:nth-child(7) {
+        grid-column-start: span 2;
+      }
+
+      @media screen and (min-width: 601px) and (max-width: 768px) {
+        section div:nth-child(7) {
+          grid-column-start: span 1;
+          grid-row-start: span 2;
+        }
+        section div:nth-child(6) {
+          grid-row-start: span 2;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+      /* .inner {
+        background-color: green;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+      } */
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div>
+        <div class="inner">
+          <img src="../img/ent1.jpg" alt="" />
+        </div>
+        <span class="inner-text">
+          <p>ENTERTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+        <span class="inner">
+          <!-- <img src="../img/ent1.jpg" alt="" /> -->
+          <p>ENTEhhhRTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+        <div class="inner2">
+          <img src="../img/ent1.jpg" alt="" />
+        </div>
+        <span class="inner-text2">
+          <p>ENTERTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+
+      <div>
+        <div class="inner2">
+          <img src="../img/ent1.jpg" alt="" />
+        </div>
+        <span class="inner-text2">
+          <p>ENTERTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+
+      <div>
+        <div class="inner2">
+          <img src="../img/ent1.jpg" alt="" />
+        </div>
+        <span class="inner-text2">
+          <p>ENTERTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+        <span class="inner">
+          <!-- <img src="../img/ent1.jpg" alt="" /> -->
+          <p>ENTERTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+
+      <div class="last-child">
+        <div class="inner">
+          <img src="../img/ent1.jpg" alt="" />
+        </div>
+        <span class="inner-text">
+          <p>ENTERTAINMENT</p>
+          <h3>Lorem ipsum dolor sit amet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+    </section>
+  </body>
+</html>

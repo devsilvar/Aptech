@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+      }
+
+      @media screen and (min-width:600px) and (max-width:768px) {
+        section{
+            grid-template-columns: 1fr 1fr;
+        }
+        section div:nth-child(6){
+            grid-row-start:  span 2;
+        }
+      }
+
+      @media screen and (max-width:559px) {
+         section{
+            grid-template-columns: 1fr;
+         }
+      }
+
+      div {
+        background-color: red;
+        padding: 20px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      @media screen and (min-width:600px) and (max-width:768px) {
+    .container{
+        width: 100%;
+    }  
+    } 
+
+      section div:first-child {
+        grid-column-start: span 2;
+        display: flex;
+        gap: 20px;
+      }
+
+      section div:last-child {
+        grid-column-start: span 2;
+        display: flex;
+        gap: 20px;
+
+      }
+
+      @media screen and (min-width:600px) and (max-width:768px) {
+        section div:last-child {
+            grid-column-start: span 1;
+            grid-row-start:  span 2;
+            flex-direction: column;
+        }
+      }      
+      img {
+        width: 100%;
+      }
+      .innerImg,
+      .innerText {
+        width: 50%;
+      }
+
+      @media screen and (min-width:600px) and (max-width:768px) {
+        section div:last-child span.innerImg,
+        section div:last-child span.innerText {
+        width: auto;
+      }
+
+      }
+
+
+    
+      
+    </style>
+  </head>
+  <body>
+
+    <h1>HEADING </h1>
+    <section class="container">
+      <div>
+        <span class="innerImg">
+          <img src="img/ent1.jpg" alt="" />
+        </span>
+        <span class="innerText">
+          <h3>ENTERTAINMENT</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+        <span>
+          <h3>ENTERTAINMENT</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+          <img src="img/ent1.jpg" alt="" />
+        </span>
+        <span>
+          <h3>ENTERTAINMENT</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+        <span>
+          <img src="img/ent1.jpg" alt="" />
+        </span>
+        <span>
+          <h3>ENTERTAINMENT</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div>
+        <span>
+          <img src="img/ent1.jpg" alt="" />
+        </span>
+        <span>
+          <h3>ENTERTAINMENT</h3>
+          <p>Lorem ipsum dolor sit amet</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+            eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+          </p>
+        </span>
+      </div>
+      <div> 
+        <span>
+        <h3>ENTERTAINMENT</h3>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+          eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+        </p>
+      </span></div>
+      <div>
+        <span class="innerImg">
+            <img src="img/ent1.jpg" alt="" />
+          </span>
+          <span class="innerText">
+            <h3>ENTERTAINMENT</h3>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam
+              eius ducimus optio veniam sit nihil beatae ea autem. Doloribus.
+            </p>
+          </span>
+      </div>
+    </section>
+  </body>
+</html>
