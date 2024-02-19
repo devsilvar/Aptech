@@ -1,0 +1,38 @@
+div+p{
+    background-color: red;
+}
+
+div , p{
+
+}
+
+div p{
+ background-color: green;
+}
+
+div > p{
+    background-color: red; 
+}
+
+a{
+    color: red;
+}
+
+a:visited{
+    color: blue;
+    font-weight: 700;
+}
+
+.A+.B{
+background-color: green;
+}
+
+[type="text"]
+
+input{
+
+}
+
+["box-"]{
+    background-color:green;
+}
