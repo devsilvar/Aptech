@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        /* for desktop screen */
+      div {
+        background-color: red;
+       
+      }
+
+      /* section div:nth-child(1){
+        width: 20%;
+      }
+      section div:nth-child(2){
+        width: 30%;
+      }
+      section div:nth-child(3){
+        width: 50%;
+      } */
+      /* section div:nth-child(3){
+        flex: 1;
+      }
+      section div:nth-child(3){
+        flex: 1;
+      } */
+      /* section {
+        display: flex;
+        gap: 10px;
+      } */
+
+      section{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:10px;
+        
+      }
+      
+
+      /* for tablet */
+    @media screen and (min-width: 600px) and (max-width: 768px) {
+        section {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        div{
+            background-color: green;
+        }
+    }
+
+/* for andriod */
+      @media screen and (max-width: 600px) {
+        section {
+            grid-template-columns: 1fr;
+        }
+        div {
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section> 
+
+
+      <div> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia deleniti sed dolore iure nostrum tempora, eum impedit repellat praesentium </div>
+      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia deleniti sed dolore iure nostrum tempora, eum impedit repellat praesentium </div>
+      <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia deleniti sed dolore iure nostrum tempora, eum impedit repellat praesentium </div>
+    </section>
+  </body>
+</html>
