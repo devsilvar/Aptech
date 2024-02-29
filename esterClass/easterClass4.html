@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        /* padding: T R B L; */
+        /* padding: 10px 90px 10px 90px;
+        margin-right: 100px; */
+        padding: 20px;
+        transition-property: padding;
+        transition-duration: 2s;
+        transition-timing-function: linear;
+      }
+      /* 
+      .box:hover {
+        background-color: green;
+        padding: 50px;
+      } */
+
+      @keyframes any {
+        from {
+          background-color: red;
+          padding: 30px;
+        }
+        to {
+          background-color: green;
+          padding: 70px;
+        }
+      }
+
+      @keyframes any {
+        0% {
+          background-color: red;
+          padding: 30px;
+        }
+        25% {
+          background-color: green;
+          padding: 70px;
+        }
+        50% {
+          background-color: blue;
+          padding: 90px;
+        }
+        75% {
+          background-color: teal;
+          padding: 140px;
+        }
+        100% {
+          background-color: lime;
+          padding: 200px;
+        }
+      }
+
+      .box {
+        animation-name: any;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+        animation-direction: reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Helo ester</div>
+  </body>
+</html>
