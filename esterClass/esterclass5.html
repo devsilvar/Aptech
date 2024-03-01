@@ -40,7 +40,7 @@
         font-size: large;
       }
 
-      li {
+      .nav-links li {
         list-style-type: none;
       }
 
@@ -63,6 +63,72 @@
         padding: 12px 29px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
           'Lucida Sans', Arial, sans-serif;
+      }
+
+      .about {
+        margin-top: 4%;
+      }
+
+      section.about .hero-heading {
+        text-align: center;
+      }
+
+      p.hero-heading {
+        margin: 2% 0;
+      }
+
+      .about-icons {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .about-icons div {
+        background-color: lightgray;
+        height: 250px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      section.service {
+        margin-top: 5%;
+        background-color: orange;
+        padding: 5% 5%;
+      }
+
+      .service p {
+        margin: 1.5% 0;
+      }
+      label {
+        display: block;
+      }
+
+      form div {
+        margin-top: 2%;
+      }
+
+      form div input {
+        width: 30%;
+        height: 35px;
+      }
+      form div textarea {
+        width: 50%;
+      }
+
+      label {
+        margin-bottom: 1%;
+      }
+      form button {
+        padding: 12px 22px;
+        margin-top: 2%;
+      }
+      .bizness {
+        margin-top: 3%;
       }
     </style>
   </head>
@@ -88,6 +154,74 @@
       <h2>Welcome to GTECH</h2>
       <p>We sell Nice and Affordable Car of Diffrent American Brands</p>
       <button>Learn More</button>
+    </section>
+
+    <section class="about">
+      <h2 class="hero-heading">About GTECH</h2>
+      <p class="hero-heading">
+        At Gtech We sell Car that , phones that are of quality brands and last,
+        We also have cars that are of low quality for our low end users
+      </p>
+
+      <div class="about-icons">
+        <div>
+          <img src="./assets/shopping-cart.svg" alt="" />
+          <p>Efficient Shop</p>
+        </div>
+
+        <div>
+          <img src="./assets/shopping-cart.svg" alt="" />
+          <p>Efficient Shop</p>
+        </div>
+
+        <div>
+          <img src="./assets/shopping-cart.svg" alt="" />
+          <p>Efficient Shop</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="service">
+      <h2>Our Services</h2>
+
+      <p>
+        We offer renting of cars, fixing of phone, fixing of engines and spare
+        parts, leasing of cars,we also sell spare parts and cars, but tokunbo
+        and tear rubber We also import and Export Fast Cars Such as Telsa,
+        Ferrari
+      </p>
+
+      <ol>
+        <li>Car Repairs</li>
+        <li>Phone repairs</li>
+        <li>Car alignment</li>
+        <li>Car Shipping</li>
+        <li>Car Washing</li>
+        <li>Car Painting</li>
+      </ol>
+    </section>
+    <section class="bizness">
+      <h2 align="center">Get In Touch with out Business</h2>
+
+      <form action="" align="center">
+        <div>
+          <label for="">Fill In Your Name:</label>
+
+          <input type="text" placeholder="Enter Your Name" />
+        </div>
+
+        <div>
+          <label for="">Fill In Your Email:</label>
+          <input type="email" placeholder="Enter Your Name" />
+        </div>
+
+        <div>
+          <label for="">Fill In Your Message:</label>
+          <textarea name="" id="" cols="20" rows="10"> </textarea>
+        </div>
+
+        <button align="center">Send Your Message</button>
+      </form>
     </section>
   </body>
 </html>
