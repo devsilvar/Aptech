@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script
+      src="https://kit.fontawesome.com/561dca6d22.js"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <style>
+      i {
+        color: red;
+        font-size: 2rem;
+      }
+      .flex-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .grid-box {
+        display: grid;
+        grid-template-columns: repeat(4, 200px);
+        gap: 20px;
+        justify-content: left;
+      }
+
+      .bx {
+        width: 100%;
+        background-color: green;
+        padding: 20px 0;
+      }
+
+      .box {
+        background-color: red;
+        padding: 20px;
+        min-width: 250px;
+        /* width: 40%; */
+        height: 200px;
+      }
+
+      .box4 {
+      }
+
+      .box-1 {
+        /* flex-grow: 4; */
+        /* height: 300px; */
+      }
+
+      .box-2 {
+        /* height: 500px; */
+        /* flex-grow: 2; */
+      }
+
+      .box-3 {
+        /* height: 100px; */
+        /* flex-shrink: 2; */
+      }
+
+      .box-4 {
+        /* height: 50px; */
+        /* flex-grow: 3; */
+      }
+
+      .work-box {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        margin: auto;
+      }
+
+      .inner-box {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+      }
+
+      .inner-img {
+        width: 40%;
+      }
+
+      .inner-img img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .work-box .inner-box:nth-child(1) {
+        background-color: blueviolet;
+      }
+      .work-box .inner-box:nth-child(2) {
+        background-color: chartreuse;
+      }
+
+      .second .inner-box:nth-child(1) {
+        background-color: orange;
+      }
+      .second .inner-box:nth-child(2) {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      hello
+      <i class="fas fa-clock"></i>
+      <i class="fas fa-sync"></i>
+      <i class="fab fa-facebook"></i>
+    </nav>
+    <section class="flex-box">
+      <div class="box box-1">A</div>
+      <div class="box box-2">B</div>
+      <div class="box box-3">C</div>
+      <div class="box box-4">D</div>
+    </section>
+
+    <section class="grid-box">
+      <div class="bx box1">A</div>
+      <div class="bx box2">B</div>
+      <div class="bx box3">C</div>
+      <div class="bx box4">D</div>
+    </section>
+
+    <section class="work-box">
+      <div class="first">
+        <div class="inner-box">A</div>
+        <div class="inner-box">B</div>
+      </div>
+      <div class="inner-img">
+        <img src="../class7Note/img.jpg" alt="" />
+      </div>
+      <div class="second">
+        <div class="inner-box">C</div>
+        <div class="inner-box">D</div>
+      </div>
+    </section>
+
+    <aside></aside>
+    <footer></footer>
+  </body>
+</html>
