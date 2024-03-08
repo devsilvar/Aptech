@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Grid</title>
+    <style>
+      /* .parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      div {
+        background-color: teal;
+        padding: 30px;
+      }
+
+      /* .parent div:first-child {
+        grid-row: 1 / span 3;
+      } */
+
+      /* .parent div:nth-child(2) {
+        grid-column-start: span 4;
+      }
+
+      .parent div:nth-child(3) {
+        grid-row-start: span 3;
+      }
+
+      .parent div:last-child {
+        grid-column-start: span 2;
+      }
+       */
+
+      form {
+        padding: 20px;
+        border: 1px solid gray;
+      }
+
+      input,
+      button {
+        display: block;
+      }
+
+      input.radio {
+        display: inline;
+      }
+
+      input[type='checkbox'] {
+        display: inline;
+      }
+
+      div {
+        background-color: teal;
+        padding: 30px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="parent">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+      <div>J</div>
+      <div>K</div>
+      <div>L</div>
+    </section>
+    <!-- <main>
+
+    </main>
+    <aside>
+
+    </aside>
+    <div>
+    </div> -->
+    <main>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </main>
+
+    <form>
+      <br />
+      <label for="">Select your Country</label>
+
+      <select name="" id="">
+        <option value="">CHoose Country</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Ghana">Ghana</option>
+        <option value="Ghana">USA</option>
+        <option value="Ghana">UK</option>
+      </select>
+      <br />
+      <label for="">Enter Your Name</label>
+      <input type="text" placeholder="Enter Your Name" list="names" />
+      <datalist id="names">
+        <option>Hello</option>
+        <option>How</option>
+        <option>Bag</option>
+        <option>Shoes</option>
+      </datalist>
+
+      <br />
+      <progress value="50" max="100"></progress>
+      <br />
+
+      <input type="password" name="" id="" />
+      <label for="">Hidden</label>
+      <!-- <input type="hidden" placeholder="ENter a hidden value" /> -->
+      <br />
+      <input list="subjects" name="" />
+      <datalist id="subjects">
+        <option>Java</option>
+        <option>Python</option>
+        <option>C++</option>
+        <option>Javascript</option>
+      </datalist>
+      <br />
+      <label for="">Enter Your Age</label>
+      <input type="text" placeholder="Enter Your Age" />
+      <br />
+      <label for="">Are you An Employable Person</label>
+
+      <br />
+      <input type="radio" name="yes" class="radio" />
+      <label for="">Yes</label>
+
+      <br />
+      <input type="radio" name="yes" class="radio" />
+      <label for="">No</label>
+
+      <br />
+      <label for="">Select 3 of Yoru favorite Colors</label>
+      <input type="checkbox" /> <label for="">Yellow</label>
+      <br />
+      <input type="checkbox" /> <label for="">Green</label>
+      <br />
+      <input type="checkbox" /> <label for="">Red</label>
+      <br />
+      <input type="checkbox" /> <label for="">Blue</label>
+      <br />
+      <input type="checkbox" /> <label for="">Brown</label>
+      <br />
+      <input type="checkbox" /> <label for="">Pink</label>
+
+      <br />
+      <textarea
+        name=""
+        id=""
+        cols="50"
+        rows="20"
+        placeholder="Let us Hear Your Message"
+      ></textarea>
+
+      <input type="week" name="" id="" />
+      <input type="range" name="" id="" />
+      <button type="submit">Send The Form</button>
+    </form>
+  </body>
+</html>
