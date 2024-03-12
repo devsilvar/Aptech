@@ -2,5 +2,6 @@
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "liveServer.settings.port": 5501
 }

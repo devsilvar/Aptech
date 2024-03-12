@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        width: 100%;
+        /* min-height: 100vh; */
+      }
+
+      hgroup {
+        text-align: center;
+      }
+
+      [class^="box-"] {
+        background-color: red;
+        text-align: center;
+      }
+
+      fieldset {
+        padding: 10px;
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .container {
+        display: grid;
+        gap: 30px;
+        /* grid-template-columns: 100px 300px 500px; */
+        /* grid-template-columns: 10% 30% 50%; */
+        grid-template-columns: 2fr 1fr 3fr;
+      }
+
+      .container-rows {
+        display: grid;
+        gap: 20px;
+        height: 60vh;
+        /* grid-template-rows: 1fr 2fr 3fr; */
+        grid-template-rows: repeat(3, 1fr);
+      }
+
+      .template-area {
+        display: grid;
+        gap: 10px;
+        height: 30vh;
+
+        grid-template-areas:
+          "A A A A   A A A A   A A A A"
+          "B B B B   B B B B   B B C C"
+          "B B B B   B B B B   B B C C";
+      }
+
+      .template-area .box-1 {
+        background-color: green;
+        grid-area: A;
+      }
+      .template-area .box-2 {
+        background-color: purple;
+        grid-area: B;
+      }
+      .template-area .box-3 {
+        grid-area: C;
+        background-color: blue;
+      }
+
+      .rowcol-gap {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-rows: 2fr auto 1fr;
+        column-gap: 20px;
+        row-gap: 30px;
+      }
+
+      .col-gaps {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 20px;
+      }
+
+      .col-gaps .box-1 {
+        grid-column: span 2;
+      }
+
+      div {
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+        overflow: hidden;
+      }
+
+      div:hover {
+        transform: translateY(-3px) scale(1.1);
+      }
+
+      .resp-gaps {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        grid-template-columns: repeat(12, minmax(100px, 1fr));
+        column-gap: 10px;
+        row-gap: 10px;
+
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(100px, 1fr)
+        ); /* to make it responsive use Autofit   */
+      }
+
+      @media screen and (min-width: 780px) {
+        .resp-gaps {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+
+          grid-template-columns: repeat(12, minmax(100px, 1fr));
+          column-gap: 10px;
+          row-gap: 10px;
+
+          grid-template-columns: repeat(
+            auto-fit,
+            minmax(100px, 1fr)
+          ); /* to make it responsive use Autofit   */
+        }
+
+        .resp-gaps div:nth-child(2) {
+          /* grid-row-start: span 3; */
+
+          /* grid-column: span 3 / auto; */
+        }
+
+        .resp-gaps div:nth-child(1) {
+          /* grid-row-start: span 2; */
+        }
+
+        .resp-gaps div:nth-child(5) {
+          grid-column-start: span 3;
+        }
+
+        .resp-gaps div:nth-child(4) {
+          /* grid-column-start: span 3; */
+        }
+        .resp-gaps div:nth-child(8) {
+          grid-row-start: span 2;
+        }
+
+        .resp-gaps div:last-child {
+          grid-column-start: span 6;
+        }
+      }
+
+      .resp-temp {
+        display: grid;
+        height: 40vh;
+        gap: 10px;
+        grid-template-areas:
+          "A B C D E"
+          "F G G G H"
+          "I G G G J"
+          "K L M N O";
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 150px 1fr 1fr 1fr 150px;
+      }
+
+      .resp-temp div:nth-child(1) {
+        grid-area: A;
+      }
+      .resp-temp div:nth-child(2) {
+        grid-area: B;
+      }
+      .resp-temp div:nth-child(3) {
+        grid-area: C;
+      }
+      .resp-temp div:nth-child(4) {
+        grid-area: D;
+      }
+      .resp-temp div:nth-child(5) {
+        grid-area: E;
+      }
+      .resp-temp div:nth-child(6) {
+        grid-area: F;
+      }
+      .resp-temp div:nth-child(7) {
+        grid-area: G;
+      }
+      .resp-temp div:nth-child(8) {
+        grid-area: G;
+      }
+      .resp-temp div:nth-child(9) {
+        grid-area: G;
+      }
+      .resp-temp div:nth-child(10) {
+        grid-area: H;
+      }
+      .resp-temp div:nth-child(11) {
+        grid-area: I;
+      }
+      .resp-temp div:nth-child(12) {
+        grid-area: G;
+      }
+      .resp-temp div:nth-child(13) {
+        grid-area: G;
+      }
+      .resp-temp div:nth-child(14) {
+        grid-area: G;
+      }
+      .resp-temp div:nth-child(15) {
+        grid-area: J;
+      }
+      .resp-temp div:nth-child(16) {
+        grid-area: K;
+      }
+      .resp-temp div:nth-child(17) {
+        grid-area: L;
+      }
+      .resp-temp div:nth-child(18) {
+        grid-area: M;
+      }
+      .resp-temp div:nth-child(19) {
+        grid-area: N;
+      }
+      .resp-temp div:nth-child(20) {
+        grid-area: O;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <hgroup>
+        <h2>Grid Template Column</h2>
+        <p>For the grid parent property we focus on Container</p>
+        <p>For the Child we will focus on the boxes</p>
+      </hgroup>
+      <main>
+        <pre>
+    <code>
+        #T0 space out the boxes and give them sizes using PX
+
+        .container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 100px 300px 500px;
+        }
+        
+        YOu can give them width using percentage- here is how
+        .container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 10% 30% 50%;
+        }
+
+        Alternatively you can repeat the smae with across the nunmber of boxes , let say you have a lot of boxes and you do not want to style one by one
+        .container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          Do you know you can specify the fraction length of each boxes
+
+        .container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 2fr 1fr 3fr;
+          }
+
+</code>
+</pre>
+
+        <div class="container">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+        </div>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Grid Template Rows</h2>
+        <p>Lets talsk about the row that is the vertical height</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+          #T0 space out the boxes and give them sizes using PX
+  
+          .container {
+              display: grid;
+              gap: 30px;
+              grid-template-columns: 100px 300px 500px;
+          }
+          
+          YOu can give them width using percentage- here is how
+          .container {
+              display: grid;
+              gap: 30px;
+              grid-template-columns: 10% 30% 50%;
+          }
+  
+          Alternatively you can repeat the smae with across the nunmber of boxes , let say you have a lot of boxes and you do not want to style one by one
+          .container {
+              display: grid;
+              gap: 30px;
+              grid-template-columns: repeat(3, 1fr);
+            }
+  
+            Do you know you can specify the fraction length of each boxes
+  
+          .container {
+              display: grid;
+              gap: 30px;
+              grid-template-columns: 2fr 1fr 3fr;
+            }
+  
+  </code>
+  </pre>
+
+        <div class="container-rows">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+        </div>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Grid Template Area</h2>
+        <p>Lets talsk about the the 12 Column areas in a grid</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+          #T0 space out the boxes and give them sizes using PX
+  
+          .template-area {
+            display: grid;
+            gap: 10px;
+            height: 30vh;
+    
+            grid-template-areas:
+              "A A A A   A A A A   A A A A"
+              "B B B B   B B B B   B B C C"
+              "B B B B   B B B B   B B C C";
+          }
+    
+          .template-area .box-1 {
+            background-color: green;
+            grid-area: A;
+          }
+          .template-area .box-2 {
+            background-color: purple;
+            grid-area: B;
+          }
+          .template-area .box-3 {
+            grid-area: C;
+            background-color: blue;
+          }
+  
+  </code>
+  </pre>
+        <section class="template-area">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+        </section>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Giving a Row and Column Gaps</h2>
+        <p>Lets break Down How to Give a column Gap and a Row Gap</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+          #T0 space out the boxes and give them sizes using PX
+          .rowcol-gap {
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-template-rows: 2fr auto 1fr;
+            column-gap: 20px;
+            row-gap: 30px;
+          }
+  
+  </code>
+  </pre>
+        <section class="rowcol-gap">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+          <div class="box-4">D</div>
+          <div class="box-5">E</div>
+          <div class="box-6">F</div>
+        </section>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Giving a Row and Column Gaps</h2>
+        <p>Lets break Down How to Give a column Gap and a Row Gap</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+          #T0 space out the boxes and give them sizes using PX
+          .rowcol-gap {
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-template-rows: 2fr auto 1fr;
+            column-gap: 20px;
+            row-gap: 30px;
+          }
+  
+  </code>
+  </pre>
+        <section class="col-gaps">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+          <div class="box-4">D</div>
+        </section>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Giving a Row and Column Gaps</h2>
+        <p>Lets break Down How to Give a column Gap and a Row Gap</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+          #T0 space out the boxes and give them sizes using PX
+          .rowcol-gap {
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-template-rows: 2fr auto 1fr;
+            column-gap: 20px;
+            row-gap: 30px;
+          }
+  
+  </code>
+  </pre>
+        <section class="rowcol-gap">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+          <div class="box-4">D</div>
+          <div class="box-5">E</div>
+          <div class="box-6">F</div>
+        </section>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Responsive Grids Row and columns</h2>
+        <p>Lets break Down How to Give a column Gap and a Row Gap</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+          #T0 space out the boxes and give them sizes using PX
+          .resp-gaps {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+    
+            grid-template-columns: repeat(12, minmax(100px, 1fr));
+            column-gap: 10px;
+            row-gap: 10px;
+    
+            grid-template-columns: repeat(
+              auto-fit,
+              minmax(100px, 1fr)
+            ); /* to make it responsive use Autofit   */
+          }
+    
+          @media screen and (min-width: 780px) {
+            .resp-gaps {
+              display: grid;
+              grid-template-columns: repeat(12, 1fr);
+    
+              grid-template-columns: repeat(12, minmax(100px, 1fr));
+              column-gap: 10px;
+              row-gap: 10px;
+    
+              grid-template-columns: repeat(
+                auto-fit,
+                minmax(100px, 1fr)
+              ); /* to make it responsive use Autofit   */
+            }
+    
+            .resp-gaps div:nth-child(2) {
+              grid-row-start: span 3;
+    
+              /* grid-column: span 3 / auto; */
+            }
+    
+            .resp-gaps div:nth-child(1) {
+              grid-row-start: span 2;
+            }
+    
+            .resp-gaps div:nth-child(5) {
+              grid-column-start: span 3;
+            }
+    
+            .resp-gaps div:nth-child(4) {
+              grid-column-start: span 3;
+            }
+    
+            .resp-gaps div:last-child {
+              grid-column-start: span 6;
+            }
+          }
+  
+  </code>
+  </pre>
+        <section class="resp-gaps">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+          <div class="box-4">D</div>
+          <div class="box-5">E</div>
+          <div class="box-6">F</div>
+          <div class="box-4">G</div>
+          <div class="box-5">H</div>
+          <div class="box-6">I</div>
+          <div class="box-4">J</div>
+          <div class="box-5">K</div>
+          <div class="box-6">L</div>
+        </section>
+      </main>
+    </fieldset>
+
+    <fieldset>
+      <hgroup>
+        <h2>Making a grid Template Area</h2>
+        <p>Fpor large Grid groups</p>
+      </hgroup>
+      <main>
+        <pre>
+      <code>
+        .resp-temp {
+          display: grid;
+          height: 40vh;
+          gap: 10px;
+          grid-template-areas:
+            "A B C D E"
+            "F G G G H"
+            "I G G G J"
+            "K L M N O";
+          grid-template-rows: repeat(5, 1fr);
+          grid-template-columns: 150px 1fr 1fr 1fr 150px;
+        }
+  
+        .resp-temp div:nth-child(1) {
+          grid-area: A;
+        }
+        .resp-temp div:nth-child(2) {
+          grid-area: B;
+        }
+        .resp-temp div:nth-child(3) {
+          grid-area: C;
+        }
+        .resp-temp div:nth-child(4) {
+          grid-area: D;
+        }
+        .resp-temp div:nth-child(5) {
+          grid-area: E;
+        }
+        .resp-temp div:nth-child(6) {
+          grid-area: F;
+        }
+        .resp-temp div:nth-child(7) {
+          grid-area: G;
+        }
+        .resp-temp div:nth-child(8) {
+          grid-area: G;
+        }
+        .resp-temp div:nth-child(9) {
+          grid-area: G;
+        }
+        .resp-temp div:nth-child(10) {
+          grid-area: H;
+        }
+        .resp-temp div:nth-child(11) {
+          grid-area: I;
+        }
+        .resp-temp div:nth-child(12) {
+          grid-area: G;
+        }
+        .resp-temp div:nth-child(13) {
+          grid-area: G;
+        }
+        .resp-temp div:nth-child(14) {
+          grid-area: G;
+        }
+        .resp-temp div:nth-child(15) {
+          grid-area: J;
+        }
+        .resp-temp div:nth-child(16) {
+          grid-area: K;
+        }
+        .resp-temp div:nth-child(17) {
+          grid-area: L;
+        }
+        .resp-temp div:nth-child(18) {
+          grid-area: M;
+        }
+        .resp-temp div:nth-child(19) {
+          grid-area: N;
+        }
+        .resp-temp div:nth-child(20) {
+          grid-area: O;
+        }
+  
+  </code>
+  </pre>
+        <section class="resp-temp">
+          <div class="box-1">A</div>
+          <div class="box-2">B</div>
+          <div class="box-3">C</div>
+          <div class="box-4">D</div>
+          <div class="box-5">E</div>
+          <div class="box-6">F</div>
+          <div class="box-4">G</div>
+          <div class="box-5">H</div>
+          <div class="box-6">I</div>
+          <div class="box-4">J</div>
+          <div class="box-5">K</div>
+          <div class="box-6">L</div>
+          <div class="box-5">H</div>
+          <div class="box-6">I</div>
+          <div class="box-4">J</div>
+          <div class="box-5">K</div>
+          <div class="box-6">L</div>
+          <div class="box-5">H</div>
+          <div class="box-6">I</div>
+          <div class="box-4">J</div>
+        </section>
+      </main>
+    </fieldset>
+  </body>
+</html>
