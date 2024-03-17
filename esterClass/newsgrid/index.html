@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      nav {
+        display: flex;
+        width: 100%;
+        padding: 15px 0px;
+        max-width: 1080px;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #hero-section {
+        background: url('./img/featured.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 380px;
+      }
+
+      .background {
+        background-color: black;
+        opacity: 0.4;
+        height: inherit;
+        filter: saturate(4);
+        z-index: -3;
+      }
+
+      .nav-links ul {
+        display: flex;
+        align-items: center;
+      }
+
+      li {
+        font-size: 15px;
+        list-style-type: none;
+        padding: 12px 13px;
+        cursor: pointer;
+      }
+
+      .nav-links ul li:hover {
+        background-color: rgb(227, 224, 224);
+        color: black;
+      }
+
+      ul li:first-child {
+        background-color: #c72727;
+        color: white;
+      }
+
+      nav img {
+        width: 170px;
+        height: auto;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        width: 35%;
+        opacity: none;
+        z-index: 5;
+      }
+
+      .hero-text p:first-child {
+        text-transform: uppercase;
+        background-color: orange;
+        width: fit-content;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 18px;
+        font-size: 10px;
+      }
+
+      .hero-text h3 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+        font-weight: 500;
+        color: white;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+      }
+
+      .hero-text p:last-child {
+        color: white;
+        background-color: red;
+      }
+
+      #hero-body-text {
+        color: white;
+        font-weight: light;
+        font-size: 2rem;
+        margin: 15px 0;
+        font-weight: lighter;
+        font-size: 0.9rem;
+      }
+
+      #hero-section button {
+        background-color: #c72727;
+        padding: 14px 24px;
+        border: none;
+        opacity: 10;
+        color: white;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation section -->
+
+    <nav>
+      <img src="img/logo.png" alt="" />
+
+      <div class="nav-links">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </nav>
+    <section id="hero-section">
+      <div class="background"></div>
+      <div class="hero-text">
+        <p>sports</p>
+        <h3>some sport articles</h3>
+        <p id="hero-body-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+          rerum officia quibusdam mollitia deserunt animi soluta laudantium.
+          Quam sapiente a dolorum magnam necessitatibus quis tempore facere
+          totam. Dolor, sequi distinctio!
+        </p>
+
+        <button>Read more</button>
+      </div>
+    </section>
+  </body>
+</html>
