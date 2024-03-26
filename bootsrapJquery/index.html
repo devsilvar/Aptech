@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .btc {
+        background-color: blue;
+        color: white;
+        padding: 20px;
+        border-radius: 20px;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>Hello How ar eYou</p>
+    <h3 id="head">My Last Class in APtech</h3>
+    <h4 class="head">How i Failed Your Jmab Exam</h4>
+
+    <button>Add Me</button>
+
+    <script>
+      $(function () {
+        $('button')
+          .css('background-color', 'red')
+          .css('color', 'white')
+          .css('padding', '10px 40px');
+      });
+
+      $('h4').addClass('btc');    
+      $('button').click(function () {
+        $('h4').removeClass('btc');
+      });
+    </script>
+  </body>
+</html>

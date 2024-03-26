@@ -1,0 +1,76 @@
+.grid-sec {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1024px;
+  width: 100%;
+  margin: auto;
+}
+.grid-sec div {
+  background-color: red;
+  padding: 5px;
+}
+
+.grid-sec div:first-child {
+  grid-column-start: span 2;
+}
+
+.grid-sec div:nth-child(3),
+.grid-sec div:nth-child(4),
+.grid-sec div:nth-child(5) {
+}
+
+.grid-sec div:nth-child(7) {
+  grid-column-start: span 2;
+}
+
+.fBox {
+  display: flex;
+  align-items: center;
+}
+.fImage img {
+  width: 100%;
+}
+
+.fImage,
+.fbody {
+  width: 50%;
+}
+
+.pd-top {
+  padding-top: 50px;
+}
+
+#fSeceond {
+  padding-top: 20px;
+}
+
+.fthird img {
+  width: 100%;
+}
+
+.f-last {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.f-image img {
+  width: 100%;
+}
+
+.f-image,
+.f-body {
+  width: 50%;
+}
+/* .grid-sec div:nth-child(3) {
+  grid-row-start: span 2;
+}
+
+.grid-sec div:nth-child(4) {
+  grid-row-start: span 2;
+}
+
+.grid-sec div:nth-child(5) {
+  grid-row-start: span 2;
+} */
