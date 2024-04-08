@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      div {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+      }
+
+      .box {
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lotana</h1>
+    <h2>Eniola</h2>
+    <h5>Hello hide me</h5>
+    <button>Click Me</button>
+
+    <ul>
+      <li>Eniola</li>
+      <li>Lotana</li>
+      <li>Jordan</li>
+      <li>Great</li>
+    </ul>
+
+    <div></div>
+    <button id="list-btn">Hide list</button>
+
+    <p>Hide when Button is clicked</p>
+
+    <script>
+      $(function () {
+        $('h1').addClass('box');
+
+        // $('button').click(function () {
+        //   $('p').toggle();
+        // });
+
+        $('h5').click(function () {
+          $(this).hide();
+        });
+
+        $('#list-btn').on('click', function () {
+          $('div').slideUp(300).delay(800).slideDown(400);
+        });
+      });
+    </script>
+  </body>
+</html>
