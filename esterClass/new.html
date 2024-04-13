@@ -34,9 +34,9 @@
       a:hover {
         /* background-color: green; */
       }
-.special::first-letter{
-  font-size: 10rem;
-}
+      .special::first-letter {
+        font-size: 10rem;
+      }
       /* section *{
         background-color: red;
       } */
@@ -61,7 +61,7 @@
   </head>
   <body>
     <p class="special">Ester</p>
-    
+
     <p>Hello</p>
 
     <input type="text" name="" id="" placeholder="enter your name" />
@@ -74,18 +74,26 @@
     <p style="background-color: green; width: 50%">Hello</p>
     <div></div>
 
-    <p style="font-family:cursive;">
+    <p style="font-family: cursive">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. In laudantium
       assumenda ipsa aperiam? Illum eveniet error, nulla dignissimos corporis
       aperiam ipsa vero rerum aut tempora nihil ea aliquid earum dolor.
     </p>
     <!-- The unit of measuremnet in Css is called PX -->
     <section>
-      <div>div</div>
-      <p>hello</p>
+      <div><mark>div</mark> div</div>
+      <p id="time">hiohioh</p>
       <b> Bold </b>
       <h2 class="lastchild">Headinf 2</h2>
       <a href="#home">Click Me</a>
     </section>
+
+    <meter value="2" min="0" max="10"></meter>
+
+    <progress value="5" min="0" max="10"></progress>
+
+    <script>
+      document.querySelector('#time').innerHTML = new Date();
+    </script>
   </body>
 </html>
