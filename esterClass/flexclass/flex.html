@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex class</title>
+    <style>
+      section {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      section div {
+        background-color: chartreuse;
+        min-width: 200px;
+        height: 200px;
+      }
+
+      @media screen and (max-width: 768px) {
+        section {
+          justify-content: center;
+        }
+        section div {
+          background-color: red;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        section {
+          justify-content: center;
+        }
+        section div {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+      <div>J</div>
+      <div>K</div>
+      <div>L</div>
+    </section>
+  </body>
+</html>

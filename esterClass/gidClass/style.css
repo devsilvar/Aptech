@@ -6,6 +6,13 @@
   width: 100%;
   margin: auto;
 }
+
+@media screen and (max-width: 425px) {
+  .grid-sec {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .grid-sec div {
   background-color: red;
   padding: 5px;
@@ -24,9 +31,22 @@
   grid-column-start: span 2;
 }
 
+@media screen and (max-width: 425px) {
+  .grid-sec div:first-child,
+  .grid-sec div:nth-child(7) {
+    grid-column-start: span 1;
+  }
+}
+
 .fBox {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+  .fBox {
+    display: block;
+  }
 }
 .fImage img {
   width: 100%;
@@ -35,6 +55,13 @@
 .fImage,
 .fbody {
   width: 50%;
+}
+
+@media screen and (max-width: 425px) {
+  .fImage,
+  .fbody {
+    width: auto;
+  }
 }
 
 .pd-top {
@@ -55,6 +82,12 @@
   gap: 10px;
 }
 
+@media screen and (max-width: 425px) {
+  .f-last {
+    display: block;
+  }
+}
+
 .f-image img {
   width: 100%;
 }
@@ -63,14 +96,12 @@
 .f-body {
   width: 50%;
 }
-/* .grid-sec div:nth-child(3) {
-  grid-row-start: span 2;
+
+@media screen and (max-width:425px){
+  .f-image,
+.f-body {
+  width: auto;
+}
 }
 
-.grid-sec div:nth-child(4) {
-  grid-row-start: span 2;
-}
-
-.grid-sec div:nth-child(5) {
-  grid-row-start: span 2;
-} */
+/* //you are targeting small devices  */
