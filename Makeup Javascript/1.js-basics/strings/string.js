@@ -182,3 +182,18 @@ if ( studentScore == A ) {
 // 40 - 44 => You had a E
 // 39 - 0 =>  You had a F
 
+
+
+let name = 'John Doe';
+let introduction = `Hi there,
+My name is ${name}.
+Nice to meet you!`;
+console.log(introduction);
+
+/* Output:
+Hi there,
+My name is John Doe.
+Nice to meet you!
+*/
+let str = '   Hello, world!   ';
+console.log(str.trim()); // output: Hello, world!
